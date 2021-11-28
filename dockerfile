@@ -25,3 +25,6 @@ RUN R -e "BiocManager::install('RcisTarget')"
 # Geneset Enrichment Analysis
 RUN R -e "BiocManager::install('clusterProfiler')"
 RUN R -e "BiocManager::install('ReactomePA')"
+
+# set global options for RStudio (Appearance)
+COPY --chown=rstudio:rstudio rstudio-prefs.json /home/rstudio/.config/rstudio/rstudio-prefs.json
